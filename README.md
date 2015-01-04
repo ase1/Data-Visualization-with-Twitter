@@ -22,7 +22,25 @@ We have some work to do before we can begin the fun. You have to eat your vegeta
 1. Go to the Processing website. https://processing.org/ ![processing_website](images/processing_website.png)
 2. Click "Download Processing". You don't have to donate, but you can if you want. ![download_processing](images/download_processing.png)
 3. Unzip and extract Processing to a convenient location. There is no installation required. ![processing_folder](images/processing_folder.png)
-4. Run processing.exe. After a splash screen, you should see the sketch window. ![processing_sketch](images/processing_sketch.png) Let's get acquainted with some of Processing's features. You'll notice in the top right there's a little box specifying that the current language is Java. Under the file menu, there are buttons to run, stop, create a new file, open, save, and export the application. 
+4. Run processing.exe. After a splash screen, you should see the sketch window. ![processing_sketch](images/processing_sketch.png) 
+Let's get acquainted with some of Processing's features. You'll notice in the top right there's a little box specifying that the current language is Java. Under the file menu, there's a toolbar with buttons to run, stop, create a new file, open, save, and export the application. You write your code in the text editor, and there's a console at the bottom. 
 
+Processing comes built in with a plethora of sweet examples that can be accessed by going to File > Examples... Feel free to peruse these and see some of the things you can easily do with the software. 
 
+As far as coding goes, Processing has two extra-important functions, setup(), and draw(). Since Processing is focused on creating visuals, both of these functions should be present in every application. If they aren't, Processing will do its best, but things might get sticky. 
 
+So without further ado, let's write our first application, the classic Hello World. 
+
+>void setup()
+>{
+>  print("Hello World");
+>}
+>
+>void draw()
+>{
+>  
+>}
+
+![hello_world](images/hello_world.png)
+
+Neat! You'll notice that a cute little gray box appeared next to the development pane. This is the window in which things will be drawn! Right now, we're just printing things to the console so nothing is there, but we'll learn some tools to make the magic happen. 
