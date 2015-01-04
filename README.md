@@ -11,3 +11,5 @@ We'll use [Twitter](http://twitter.com) as our source of data, since Twitter's a
 We'll also use [Processing](https://processing.org/), an open-source development environment that makes it easy to produce visuals. It defaults to Java, but there are other modes that can be downloaded for other applications. Because most intro Computer Science classes use Java, we'll stick to that for now. 
 
 <!--- For other examples of data visualizations, I suggest you check out the [DataIsBeautiful Subreddit](http://www.reddit.com/r/dataisbeautiful). It's a great community and can spark inspiration for projects. Do something awesome. --->
+
+![twitter_globe](images/twitter_globe.jpg?raw=true "")
