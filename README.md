@@ -19,7 +19,7 @@ We'll also use [Processing](https://processing.org/), an open-source development
 
 We have some work to do before we can begin the fun. You have to eat your vegetables before dessert. Let's set up Processing. 
 
-1. Go to the Processing website. https://processing.org/ ![processing_website](images/processing_website.png)
+1. Go to the Processing website, https://processing.org/ ![processing_website](images/processing_website.png)
 2. Click "Download Processing". You don't have to donate, but you can if you want. ![download_processing](images/download_processing.png)
 3. Unzip and extract Processing to a convenient location. There is no installation required. ![processing_folder](images/processing_folder.png)
 4. Run processing.exe. After a splash screen, you should see the sketch window. ![processing_sketch](images/processing_sketch.png) 
@@ -47,4 +47,24 @@ So without further ado, let's write our first application, the classic Hello Wor
 
 ![hello_world](images/hello_world.png)
 
-Neat! You'll notice that a cute little gray box appeared next to the development pane. This is the window in which things will be drawn! Right now, we're just printing things to the console so nothing is there, but we'll learn some tools to make the magic happen. 
+Neat! You'll notice that a cute little gray box appeared next to the development pane. **This is the window in which things will be drawn!** Right now, we're just printing things to the console so nothing is there, but we'll learn some tools to make the magic happen. 
+
+
+<a name="Twitter Intro">
+## Getting Started with the Twitter API ##
+
+Now that you know the basics of Processing, let's connect it to Twitter! There's a little bit of setup for this too, so hold tight. Make sure you have a Twitter account, because you need one to access the dev tools. 
+
+1. Go to https://apps.twitter.com/ and log in. 
+![twitter_apps](images/twitter_apps.png)
+2. Create a new app using the "Create New App" button. 
+3. Fill out the fields however you like, it's not super important. We're after some authorization credentials that Twitter assigns to each app, but it doesn't matter what you write in the fields. 
+![twitter_create](images/twitter_create.png)
+4. Once you agree to the terms and create the app, navigate to "Keys and Access Tokens". We need four strings from this page to gan access to all of Twitter. 
+![keys_and_access_tokens](images/keys_and_access_tokens.png)
+5. Click the "Create my Access Token" button. Proceed. 
+![create_my_access_token](images/create_my_access_token.png)
+6. Click "Test OAuth" at the top, and hold on to those four strings. They're important. 
+![test_oauth](images/test_oauth.png)
+7. Twitter is all set up! We're ready to make our app. 
+
