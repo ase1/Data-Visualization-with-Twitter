@@ -17,7 +17,11 @@ We'll also use [Processing](https://processing.org/), an open-source development
 <a name="Processing Intro">
 ## Getting Started with Processing ##
 
+<<<<<<< HEAD
 We have some work to do before we can begin the fun. You have to eat your vegetables before you get dessert. Let's set up Processing. 
+=======
+We have some work to do before we can begin the fun. You have to eat your vegetables before dessert. Let's set up Processing. 
+>>>>>>> 4ab44e510e79035eac074f448664455acc8642ee
 1. Go to the Processing website. https://processing.org/
 ![processing_website(images/processing_website.png?raw=true)]
 2. Click "Download Processing". You don't have to donate, but you can if you want. 
