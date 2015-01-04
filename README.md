@@ -17,27 +17,22 @@ We'll also use [Processing](https://processing.org/), an open-source development
 <a name="Processing Intro">
 ## Getting Started with Processing ##
 
-<<<<<<< HEAD
+
 We have some work to do before we can begin the fun. You have to eat your vegetables before you get dessert. Let's set up Processing. 
 =======
 We have some work to do before we can begin the fun. You have to eat your vegetables before dessert. Let's set up Processing. 
->>>>>>> 4ab44e510e79035eac074f448664455acc8642ee
-<<<<<<< HEAD
+
 1. Go to the Processing website. https://processing.org/ ![processing_website(images/processing_website.png?raw=true) ""]
 2. Click "Download Processing". You don't have to donate, but you can if you want. ![processing_website(images/download_processing.png?raw=true) ""]
 3. Unzip and extract Processing to a convenient location. There is no installation required. ![processing_website(images/processing_folder.png?raw=true) ""]
 4. Run processing.exe. After a splash screen, you should see the sketch window. ![processing_website(images/processing_sketch.png?raw=true) ""] Let's get acquainted with some of Processing's features. You'll notice in the top right there's a little box specifying that the current language is Java. Under the file menu, there are buttons to run, stop, create a new file, open, save, and export the application. 
 =======
-1. Go to the Processing website. https://processing.org/
-![processing_website(images/processing_website.png?raw=true) ""]
-2. Click "Download Processing". You don't have to donate, but you can if you want. 
-![processing_website(images/download_processing.png?raw=true) ""]
-3. Unzip and extract Processing to a convenient location. There is no installation required. 
-![processing_website(images/processing_folder.png?raw=true) ""]
-4. Run processing.exe. After a splash screen, you should see the sketch window. 
-![processing_website(images/processing_sketch.png?raw=true) ""]
+1. Go to the Processing website. https://processing.org/ ![processing_website(images/processing_website.png?raw=true) ""]
+2. Click "Download Processing". You don't have to donate, but you can if you want. ![processing_website(images/download_processing.png?raw=true) ""]
+3. Unzip and extract Processing to a convenient location. There is no installation required. ![processing_website(images/processing_folder.png?raw=true) ""]
+4. Run processing.exe. After a splash screen, you should see the sketch window. ![processing_website(images/processing_sketch.png?raw=true) ""]
 Let's get acquainted with some of Processing's features. You'll notice in the top right there's a little box specifying that the current language is Java. Under the file menu, there are buttons to run, stop, create a new file, open, save, and export the application. 
->>>>>>> 19a9a2ffbd58a3f9fdc5b9972e3791223920ab65
+
 
 
 
