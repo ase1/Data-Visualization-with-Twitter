@@ -32,11 +32,17 @@ As far as coding goes, Processing has two extra-important functions, setup(), an
 So without further ado, let's write our first application, the classic Hello World. 
 
 >void setup()
+
 >{
+
 >print("Hello World");
+
 >}
+
 >void draw()
+
 >{
+
 >}
 
 ![hello_world](images/hello_world.png)
