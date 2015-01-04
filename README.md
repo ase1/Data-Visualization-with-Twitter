@@ -31,15 +31,15 @@ As far as coding goes, Processing has two extra-important functions, setup(), an
 
 So without further ado, let's write our first application, the classic Hello World. 
 
->void setup()
->{\n
->  print("Hello World");\n
->}\n
->\n
->void draw()\n
->{\n
->  \n
->}\n
+> void setup()
+> {
+>  print("Hello World");
+> }
+>
+> void draw()
+> {
+>   
+> }
 
 ![hello_world](images/hello_world.png)
 
