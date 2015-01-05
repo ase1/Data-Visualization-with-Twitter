@@ -219,15 +219,9 @@ If the description above is confusing, here's a nice little screenshot.
 ![onetweet](images/onetweet.png)
 
 *Big congrats to @Franc_IglesiasB for the winning tweet.*
-<<<<<<< HEAD
 
 ---
 
-=======
-
----
-
->>>>>>> e6007c0f383d8ab8b64ff17e4cf88bbab35e19e5
 <a name="Setting Up">
 ## Setting Up a Data Visualization ##
 
@@ -349,4 +343,5 @@ Awesome! We now have a pretty interesting and dynamic data visualization of a cu
 ![pbj](images/pbj.png)
 
 Processing is a tremendously powerful tool for data visualization, but this workshop was kept pretty simple to stay time-friendly. Go out, and make amazing things. 
+
 ---
