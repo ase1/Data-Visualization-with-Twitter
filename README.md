@@ -1,10 +1,11 @@
 <a name="Title" />
 # Data Visualization with Processing and Twitter API #
 
+![twitter_globe](images/twitter_globe.jpg?raw=true)
+
+---
 <a name="Overview" />
 ## Overview ##
-
-![twitter_globe](images/twitter_globe.jpg?raw=true)
 
 The Internet is home to an almost insurmountable amount of raw data. While humans are great at a lot of things like [riding bikes] (http://damien.pobel.fr/images/backflip-qui-part-mal-en-bmx-street.jpg) and [depleting Earth's natural resources] (http://upload.wikimedia.org/wikipedia/commons/0/05/Coal_mine_Wyoming.jpg), we aren't so great at parsing a lot of data. Luckily, computers are really good at parsing and sorting lots of data. We can even ask computers to process that data and output a result that is significant to us. 
 
@@ -12,7 +13,24 @@ We'll use [Twitter](http://twitter.com) as our source of data, since Twitter's a
 
 We'll also use [Processing](https://processing.org/), an open-source development environment that makes it easy to produce visuals. It defaults to Java, but there are other modes that can be downloaded for other applications. Because most intro Computer Science classes use Java, we'll stick to that for now. 
 
-<!--- For other examples of data visualizations, I suggest you check out the [DataIsBeautiful Subreddit](http://www.reddit.com/r/dataisbeautiful). It's a great community and can spark inspiration for projects. Do something awesome. --->
+For other examples of data visualizations, I suggest you check out the [DataIsBeautiful Subreddit](http://www.reddit.com/r/dataisbeautiful). It's a great community and can spark inspiration for projects. Do something awesome.
+
+---
+
+<a name="Tasks">
+## What You're Getting Yourself Into ##
+
+In this walkthrough, we will cover:
+1. Getting Started with Processing (#Processing Intro)
+1. Getting Started with the Twitter API (#Twitter Intro)
+1. Importing the Twitter4J library (#Import Library)
+1. Getting Data from Twitter to Processing (#Getting Data)
+1. Setting Up a Data Visualization (#Setting Up)
+1. Drawing the Data Visualization (#Drawing)
+1. Wrapping Up (#Wrapup)
+
+Get excited.
+---
 
 <a name="Processing Intro">
 ## Getting Started with Processing ##
@@ -53,6 +71,7 @@ So without further ado, let's write our first application, the classic Hello Wor
 
 Neat! You'll notice that a cute little gray box appeared next to the development pane. **This is the window in which things will be drawn!** Right now, we're just printing things to the console so nothing is there, but we'll learn some tools to make the magic happen. 
 
+---
 
 <a name="Twitter Intro">
 ## Getting Started with the Twitter API ##
@@ -82,8 +101,10 @@ Go to the Twitter4J website, download the latest stable version, and unzip to a 
 
 In the "lib" subfolder, you'll see a couple *.jar* files. We need these so keep them handy. 
 
-<a name="Visualizing Data">
-## Visualizing Data ##
+---
+
+<a name="Getting Data">
+## Getting Data From Twitter ##
 
 So now that the easy stuff is done, we have to think of something to try to visualize. Twitter's often used for sports updates, because it's lightning-quick and people have nothing better to talk about. **Let's see if we can visualize the popularity of two different sports teams in real time!** 
 
@@ -189,8 +210,12 @@ If the description above is confusing, here's a nice little screenshot.
 
 ![onetweet](images/onetweet.png)
 
-*Congrats to @Franc_IglesiasB for the winning tweet of this workshop.*
+*Big congrats to @Franc_IglesiasB for the winning tweet.*
 
+---
+
+<a name="Setting Up">
+## Setting Up a Data Visualization ##
 
 Let's get started with the real data now! For this visualization, the user inputs two sports teams that are playing. We then visualize a sort of popularity tug-of-war; whoever gets tweeted more gets a bigger piece of the digital pie. We need a place to enter the two teams, so we make a couple Strings and associated counters to count the number of tweets. I chose the Lions and the Cowboys because the two teams had recently played and I'm sure the Twitterverse is hot and bothered about it. 
 
@@ -210,7 +235,7 @@ This outputs the index of the mention of the team. However, if the team wasn't m
 
 ![searchteams](images/searchteams.png)
 
-So now we have our data. Let's make a nice visual. The program can be run in full screen using Ctrl+Shift+R. 
+So now we have our data. Let's make a nice visual. FYI: The program can be run in full screen using Ctrl+Shift+R. 
 
 Let's make a scoreboard first. In setup(), we set the size of the window to your display resolution (mine is 1366p x 768p), the font type, and the background color. We use variables *width* and *height* because we may need to reference these again. 
 
@@ -228,7 +253,12 @@ We also need to initialize PFont and PImage objects as config variables.
 
 We're officially finished with setup! Let's get to drawing. 
 
-For the scoreboard, we make two jumbotrons with the team names, and bars showing the percentage of total tweets each team received. First, set the color of the jumbotrons, then assign each a size. 
+---
+
+<a name="Drawing">
+## Creating a Data Visualization ##
+
+For the scoreboard, we make two jumbotrons with the team names, and bars showing the percentage of total tweets each team received. First, we set the color of the jumbotrons, then we assign each a size. 
 
 >  fill(color(40,40,40)); *//fill with gray*
 
@@ -248,7 +278,7 @@ Then, let's label each team.
 
 Now let's calculate the percentage of tweets that the Lions receive, out of the total. 
 
->double percent = (double)team1counter / (team1counter+team2counter+1);  //+1 to avoid div by zero
+>double percent = (double)team1counter / (team1counter+team2counter+1);  *//+1 to avoid div by zero*
 
 We create two more rectangles, using this percentage value. This will make a colored bar in the middle that shows the percentage of tweets for each team. 
 
@@ -296,8 +326,13 @@ But we only do this once we find the right tweet. Therefore, it belongs under th
 
 ![final](images/final.png)
 
+---
+<a name="Wrapup">
+## Wrapping Up ##
+
 Awesome! We now have a pretty interesting and dynamic data visualization of a current event (football game). Of course, the two team names can be swapped for any two keywords, which surely could show interesting relationships between other things. 
 
 ![pbj](images/pbj.png)
 
 Processing is a tremendously powerful tool for data visualization, but this workshop was kept pretty simple to stay time-friendly. Go out, and make amazing things. 
+---
