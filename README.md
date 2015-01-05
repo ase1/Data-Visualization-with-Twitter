@@ -342,6 +342,23 @@ Awesome! We now have a pretty interesting and dynamic data visualization of a cu
 
 ![pbj](images/pbj.png)
 
-Processing is a tremendously powerful tool for data visualization, but this workshop was kept pretty simple to stay time-friendly. Go out, and make amazing things. 
+If we want to export the application for use on any computer, Processing makes this easy. Just click the Export Application button on the toolbar, and pick your settings. Processing will produce a .exe for 32-bit systems and a .bat for 64-bit systems. 
+
+![export](images/export.png)
+
+![export2](images/export2.png)
+
+
+**Here's a video of the application in action. Pardon the obnoxious watermark in the corner.**
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/6Akt70mZRco" frameborder="0" allowfullscreen></iframe>
+
+
+Processing is a tremendously powerful tool for data visualization, but this walkthrough was kept pretty simple to stay time-friendly. Go out, and make amazing things. 
+
+
+
+
+*Written by Andrew Elsey.*
 
 ---
