@@ -302,11 +302,11 @@ Lastly, let's show the numerical percentage in the middle of the bar. It's a tot
 
 >fill(team2color);
 
->text(Double.toString(round((float)percent*1000)/(double)10)+"%", (int)(percent\*width/2.5), (int)height\*.47);
+>text(Double.toString(round((float)percent\*1000)/(double)10)+"%", (int)(percent\*width/2.5), (int)height\*.47);
 
 >fill(team1color);
 
->text(Double.toString(100-round((float)percent*1000)/(double)10)+"%", width-(int)((1-percent)\*width/1.9), (int)height\*.47);
+>text(Double.toString(100-round((float)percent\*1000)/(double)10)+"%", width-(int)((1-percent)\*width/1.9), (int)height\*.47);
 
 Here's the finished draw() function! Output follows. 
 
