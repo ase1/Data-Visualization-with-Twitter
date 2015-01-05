@@ -21,6 +21,23 @@ For other examples of data visualizations, I suggest you check out the [DataIsBe
 ## What You're Getting Yourself Into ##
 
 In this walkthrough, we will cover:
+1. [Getting Started with Processing] (#Processing Intro)
+2. [Getting Started with the Twitter API] (#Twitter Intro)
+3. [Importing the Twitter4J library] (#Import Library)
+4. [Getting Data from Twitter to Processing] (#Getting Data)
+5. [Setting Up a Data Visualization] (#Setting Up)
+6. [Drawing the Data Visualization] (#Drawing)
+7. [Wrapping Up] (#Wrapup)
+
+Get excited.
+---
+
+---
+
+<a name="Tasks">
+## What You're Getting Yourself Into ##
+
+In this walkthrough, we will cover:
 1. Getting Started with Processing (#Processing Intro)
 1. Getting Started with the Twitter API (#Twitter Intro)
 1. Importing the Twitter4J library (#Import Library)
@@ -211,9 +228,15 @@ If the description above is confusing, here's a nice little screenshot.
 ![onetweet](images/onetweet.png)
 
 *Big congrats to @Franc_IglesiasB for the winning tweet.*
+<<<<<<< HEAD
 
 ---
 
+=======
+
+---
+
+>>>>>>> e6007c0f383d8ab8b64ff17e4cf88bbab35e19e5
 <a name="Setting Up">
 ## Setting Up a Data Visualization ##
 
