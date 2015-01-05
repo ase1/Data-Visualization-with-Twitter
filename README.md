@@ -85,16 +85,26 @@ In the "lib" subfolder, you'll see a couple *.jar* files. We need these so keep 
 <a name="Visualizing Data">
 ## Visualizing Data ##
 
-So now that the easy stuff is done, we have to think of something to try to visualize. Twitter's often used for sports updates, because it's lightning-quick and people have nothing better to talk about. **Let's see if we can visualize the popularity of different sports!** 
+So now that the easy stuff is done, we have to think of something to try to visualize. Twitter's often used for sports updates, because it's lightning-quick and people have nothing better to talk about. **Let's see if we can visualize the popularity of two different sports teams in real time!** 
 
 ![gosports](images/gosports.jpg)
 
-First things first, we need to import the Twitter4J library into Processing. This is super easy, just drag those *twitter4j-XXXX-4.0.2.jar* files into the Processing Window. The message pane in Processing will tell you that six files were added to the sketch. 
+First things first, we need to import the Twitter4J library into Processing. This is super easy, just drag those *twitter4j-XXXX-4.0.2.jar* files into the Processing Window. The message pane in Processing will tell you that five files were added to the sketch. 
 ![import_t4j](images/import_t4j.png)
 
 Now, let's get Twitter's resources into Processing. We need four static Strings: *OAuthConsumerKey*, *OAuthConsumerSecret*, *AccessToken*, and *AccessTokenSecret*. These do not have to be defined within any function. 
 In addition to the strings, we need a TwitterStream object to receive tweets. This also goes with the config variables. 
+
+>static String OAuthConsumerKey = "[YOUR_CREDENTIALS_HERE]";
+
+>static String OAuthConsumerSecret = "[YOUR_CREDENTIALS_HERE]";
+
+>static String AccessToken = "[YOUR_CREDENTIALS_HERE]";
+
+>static String AccessTokenSecret = "[YOUR_CREDENTIALS_HERE]";
+
 >TwitterStream twitter = new TwitterStreamFactory().getInstance();
+
 ![input_keys](images/input_keys.png)
 
 Also, before we get ahead of ourselves, let's save our work. 
@@ -153,3 +163,31 @@ We also need a couple lines of code at the bottom to define these functions and 
 >  }
 
 >};
+
+![connection](images/connection.png)
+
+Let's grab a random tweet and print it to the console to make sure everything's working. 
+
+In the setup() function, we tell the app to search a random sampling of Twitter. Add: 
+>twitter.sample();
+
+Then, we have to print that to the console. We create a boolean *bool*, set to **true**. Then, in the StatusListener initialization (under the function onStatus), we use the following code snippet: 
+
+>while(bool)
+
+>{
+
+>  println("@" + status.getUser().getScreenName() + " - " + status.getText());
+
+>  bool = false;
+
+>}
+
+This snippet prints a random tweeter and their tweet. Because the listener is *listening* constantly, we need to escape (otherwise, the console will freak out, showing all of the tweets from twitter in a brilliant spasm of text). Thus, we use *bool* coupled with a while() statement to escape. 
+
+If the description above is confusing, here's a nice little screenshot. 
+
+![onetweet](images/onetweet.png)
+
+*Congrats to @Franc_IglesiasB for the winning tweet of this workshop. *
+
