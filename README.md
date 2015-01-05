@@ -270,17 +270,17 @@ For the scoreboard, we make two jumbotrons with the team names, and bars showing
 
 >  fill(color(40,40,40)); *//fill with gray*
 
->  rect(width*0, height*.05, width*.4, height*.1); *//draws a rectangle, using coords (x1,y1,x2,y2)*
+>  rect(width\*0, height\*.05, width\*.4, height\*.1); *//draws a rectangle, using coords (x1,y1,x2,y2)*
 
->  rect(width*.6, height*.05, width*1, height*.1); 
+>  rect(width\*.6, height\*.05, width\*1, height\*.1); 
 
 Then, let's label each team. 
 
 >  fill(color(255,255,255));
 
->  text(team1, width*.15, height*.125);
+>  text(team1, width\*.15, height\*.125);
 
->  text(team2, width*.75, height*.125);
+>  text(team2, width\*.75, height\*.125);
 
 ![jumbo](images/jumbo.png)
 
@@ -292,21 +292,21 @@ We create two more rectangles, using this percentage value. This will make a col
 
 >fill(team1color);
 
->rect(width*0, height*.25, (int)(width*percent), height*.4);
+>rect(width\*0, height\*.25, (int)(width\*percent), height\*.4);
 
 >fill(team2color);
 
->rect((int)(width*percent), height*.25, width*1, height*.4);
+>rect((int)(width\*percent), height\*.25, width\*1, height\*.4);
 
 Lastly, let's show the numerical percentage in the middle of the bar. It's a total mess of casting, but you get the idea. The numbers are fudged, I chose what looked best to me, though you're entirely welcome to try to calculate the perfect center for each value. 
 
 >fill(team2color);
 
->text(Double.toString(round((float)percent*1000)/(double)10)+"%", (int)(percent*width/2.5), (int)height*.47);
+>text(Double.toString(round((float)percent*1000)/(double)10)+"%", (int)(percent\*width/2.5), (int)height\*.47);
 
 >fill(team1color);
 
->text(Double.toString(100-round((float)percent*1000)/(double)10)+"%", width-(int)((1-percent)*width/1.9), (int)height*.47);*/
+>text(Double.toString(100-round((float)percent*1000)/(double)10)+"%", width-(int)((1-percent)\*width/1.9), (int)height\*.47);
 
 Here's the finished draw() function! Output follows. 
 
@@ -326,7 +326,7 @@ Then, we load this image from the Internet.
 
 Lastly, we need to draw that image. We add image() around the loaded image and specify where to place it. Maybe we'll scatter them randomly under the team name. 
 
->image(loadImage((status.getUser().getMiniProfileImageURL())), (int)random(width*.45), height-(int)random(height*.4));
+>image(loadImage((status.getUser().getMiniProfileImageURL())), (int)random(width\*.45), height-(int)random(height\*.4));
 
 But we only do this once we find the right tweet. Therefore, it belongs under the if statement determining if the tweet contains the team name. 
 
@@ -351,7 +351,7 @@ If we want to export the application for use on any computer, Processing makes t
 
 **Here's a video of the application in action. Pardon the obnoxious watermark in the corner.**
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/6Akt70mZRco" frameborder="0" allowfullscreen></iframe>
+[![Video of Sports Visualization](http://img.youtube.com/vi/6Akt70mZRco/0.jpg)](http://www.youtube.com/watch?v=6Akt70mZRco)
 
 
 Processing is a tremendously powerful tool for data visualization, but this walkthrough was kept pretty simple to stay time-friendly. Go out, and make amazing things. 
