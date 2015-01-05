@@ -189,5 +189,115 @@ If the description above is confusing, here's a nice little screenshot.
 
 ![onetweet](images/onetweet.png)
 
-*Congrats to @Franc_IglesiasB for the winning tweet of this workshop. *
+*Congrats to @Franc_IglesiasB for the winning tweet of this workshop.*
 
+
+Let's get started with the real data now! For this visualization, the user inputs two sports teams that are playing. We then visualize a sort of popularity tug-of-war; whoever gets tweeted more gets a bigger piece of the digital pie. We need a place to enter the two teams, so we make a couple Strings and associated counters to count the number of tweets. I chose the Lions and the Cowboys because the two teams had recently played and I'm sure the Twitterverse is hot and bothered about it. 
+
+![twoteams](images/twoteams.png)
+
+Again, we need to define which part of Twitter should be searched in setup(). Since we're only looking for two keywords, "Lions" and "Cowboys", we can filter out everything else. To do this, we create an array for the keywords, and then use Twitter4J's *filter()* function. 
+
+>String keywords[] = {team1, team2};
+
+>twitter.filter(new FilterQuery().track(keywords));
+
+Then, we need to count the number of tweets each team gets. We go back into our listener, and create a couple if statements that will add to the counters if we get a hit. To search each tweet, we use:
+
+>status.getText().indexOf(*string*)
+
+This outputs the index of the mention of the team. However, if the team wasn't mentioned in the tweet, then the index is -1. Therefore, we know we have a match whenever the index is *not -1*. Pretty neat, huh?
+
+![searchteams](images/searchteams.png)
+
+So now we have our data. Let's make a nice visual. The program can be run in full screen using Ctrl+Shift+R. 
+
+Let's make a scoreboard first. In setup(), we set the size of the window to your display resolution (mine is 1366p x 768p), the font type, and the background color. We use variables *width* and *height* because we may need to reference these again. 
+
+>  size(width, height);
+
+>  f = createFont("Segoe UI", 48);
+
+>  textFont(f);
+
+>  background(color(0,0,0));
+
+We also need to initialize PFont and PImage objects as config variables. 
+
+![setup_finished](images/setup_finished.png)
+
+We're officially finished with setup! Let's get to drawing. 
+
+For the scoreboard, we make two jumbotrons with the team names, and bars showing the percentage of total tweets each team received. First, set the color of the jumbotrons, then assign each a size. 
+
+>  fill(color(40,40,40)); *//fill with gray*
+
+>  rect(width*0, height*.05, width*.4, height*.1); *//draws a rectangle, using coords (x1,y1,x2,y2)*
+
+>  rect(width*.6, height*.05, width*1, height*.1); 
+
+Then, let's label each team. 
+
+>  fill(color(255,255,255));
+
+>  text(team1, width*.15, height*.125);
+
+>  text(team2, width*.75, height*.125);
+
+![jumbo](images/jumbo.png)
+
+Now let's calculate the percentage of tweets that the Lions receive, out of the total. 
+
+>double percent = (double)team1counter / (team1counter+team2counter+1);  //+1 to avoid div by zero
+
+We create two more rectangles, using this percentage value. This will make a colored bar in the middle that shows the percentage of tweets for each team. 
+
+>fill(team1color);
+
+>rect(width*0, height*.25, (int)(width*percent), height*.4);
+
+>fill(team2color);
+
+>rect((int)(width*percent), height*.25, width*1, height*.4);
+
+Lastly, let's show the numerical percentage in the middle of the bar. It's a total mess of casting, but you get the idea. The numbers are fudged, I chose what looked best to me, though you're entirely welcome to try to calculate the perfect center for each value. 
+
+>fill(team2color);
+
+>text(Double.toString(round((float)percent*1000)/(double)10)+"%", (int)(percent*width/2.5), (int)height*.47);
+
+>fill(team1color);
+
+>text(Double.toString(100-round((float)percent*1000)/(double)10)+"%", width-(int)((1-percent)*width/1.9), (int)height*.47);*/
+
+Here's the finished draw() function! Output follows. 
+
+![draw_finished](images/draw_finished.png)
+
+![plain_output](images/plain_output.png)
+
+Lastly, let's try to fill in some of that empty space at the bottom. We have access to a lot of information about each tweet, we just need to figure out how to coax it out of Twitter. It'd be really neat if that, for each tweet, the user's picture was displayed below the team to form a sort of army of sports fans. We can actually do this with only two more lines of code! This is why we initialized the PImage object earlier. 
+
+To accomplish this, we'll use the mini profile image of each user. We can get the URL of this picture from the status with 
+
+>status.getUser().getMiniProfileImageURL()
+
+Then, we load this image from the Internet. 
+
+>loadImage((status.getUser().getMiniProfileImageURL()))
+
+Lastly, we need to draw that image. We add image() around the loaded image and specify where to place it. Maybe we'll scatter them randomly under the team name. 
+
+>image(loadImage((status.getUser().getMiniProfileImageURL())), (int)random(width*.45), height-(int)random(height*.4));
+
+But we only do this once we find the right tweet. Therefore, it belongs under the if statement determining if the tweet contains the team name. 
+
+![minipics](images/minipics.png)
+
+![final](images/final.png)
+
+Awesome! We now have a pretty interesting and dynamic data visualization of a current event (football game). Of course, the two team names can be swapped for any two keywords, which surely could show interesting relationships between other things. 
+
+![pbj](images/pbj.png)
+
+Processing is a tremendously powerful tool for data visualization, but this workshop was kept pretty simple to stay time-friendly. Go out, and make amazing things. 
