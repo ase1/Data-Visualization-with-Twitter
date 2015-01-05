@@ -21,15 +21,23 @@ For other examples of data visualizations, I suggest you check out the [DataIsBe
 ## What You're Getting Yourself Into ##
 
 In this walkthrough, we will cover:
+
 1. [Getting Started with Processing] (#Processing Intro)
+
 2. [Getting Started with the Twitter API] (#Twitter Intro)
+
 3. [Importing the Twitter4J library] (#Import Library)
+
 4. [Getting Data from Twitter to Processing] (#Getting Data)
+
 5. [Setting Up a Data Visualization] (#Setting Up)
+
 6. [Drawing the Data Visualization] (#Drawing)
+
 7. [Wrapping Up] (#Wrapup)
 
 Get excited.
+
 ---
 
 ---
