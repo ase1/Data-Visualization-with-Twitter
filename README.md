@@ -40,23 +40,6 @@ Get excited.
 
 ---
 
----
-
-<a name="Tasks">
-## What You're Getting Yourself Into ##
-
-In this walkthrough, we will cover:
-1. Getting Started with Processing (#Processing Intro)
-1. Getting Started with the Twitter API (#Twitter Intro)
-1. Importing the Twitter4J library (#Import Library)
-1. Getting Data from Twitter to Processing (#Getting Data)
-1. Setting Up a Data Visualization (#Setting Up)
-1. Drawing the Data Visualization (#Drawing)
-1. Wrapping Up (#Wrapup)
-
-Get excited.
----
-
 <a name="Processing Intro">
 ## Getting Started with Processing ##
 
